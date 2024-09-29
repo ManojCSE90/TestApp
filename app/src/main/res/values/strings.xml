@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="add">ADD</string>
+    <string name="view_balance">View Balance</string>
+    <string name="expenses">Expenses</string>
+    <string name="total">Total</string>
+    <string name="paid_by">Paid by</string>
+    <string name="participates">Participates</string>
+    <string name="simplify_all">SIMPLIFY ALL</string>
+    <string name="settle">SETTLE</string>
+</resources>
