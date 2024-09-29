@@ -28,7 +28,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit{
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
 
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
@@ -39,13 +39,13 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit): ApiService{
+    fun provideApiService(retrofit: Retrofit): ApiService {
 
         return retrofit.create(ApiService::class.java)
     }
 
     @Provides
-    fun provideOkhttpClient(resources: Resources): OkHttpClient{
+    fun provideOkhttpClient(resources: Resources): OkHttpClient {
 
         return OkHttpClient.Builder()
             .addInterceptor(createAuthInterceptor(resources))
@@ -54,7 +54,7 @@ class AppModule {
 
     private fun createAuthInterceptor(resources: Resources): Interceptor {
 
-        return Interceptor { chain: Interceptor.Chain ->  
+        return Interceptor { chain: Interceptor.Chain ->
             val updatedUrl = chain.request().url().newBuilder()
                 .addQueryParameter(Constants.PARAM_API_KEY, resources.getString(R.string.api_key))
                 .build()
@@ -69,6 +69,6 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun providePicasso():Picasso = Picasso.get()
+    fun providePicasso(): Picasso = Picasso.get()
 
 }

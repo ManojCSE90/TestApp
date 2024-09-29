@@ -2,4 +2,5 @@
     <string name="app_name">TestApp</string>
     <string name="api_key">e4f9e61f6ffd66639d33d3dde7e3159b</string>
     <string name="something_went_wrong">something went wrong.</string>
+    <string name="top_movies">Top Movies</string>
 </resources>

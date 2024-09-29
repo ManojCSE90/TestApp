@@ -16,10 +16,10 @@ class TestViewModel @Inject constructor(private val repository: TestRepository) 
 
     val topRatedMovies: LiveData<NetworkResult<List<Film>>> = repository.topRatedMovies
 
-    fun getTopRatedMovies(){
+    fun getTopRatedMovies() {
 
         viewModelScope.launch(Dispatchers.IO) {
-           repository.getTopRatedMovies()
+            repository.getTopRatedMovies()
         }
     }
 }
