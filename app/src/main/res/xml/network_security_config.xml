@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config>
-        <domain includeSubdomains="true">example.com</domain>
+        <domain includeSubdomains="true">api.themoviedb.org</domain>
         <pin-set>
             <!-- Pin for the SSL/TLS certificate of example.com -->
             <pin digest="SHA-256">k1Hdw5sdSn5kh/gemLVSQD/P4i4IBQEY1tW4WNxh9XM=</pin>
